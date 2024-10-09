@@ -1,31 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="journal.js"></script>
-    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Meta Movie</title>
-</head>
+    <script src="journal.js" defer></script>
+    <link href="style.css" rel="stylesheet" />
 
-<body>
-  <header id="header">
-    <nav id="navbar"></nav>>
-    <div id="search-bar"></div>
-  </header>
+    <title>Movie Meta</title>
+  </head>
+  <!-- Some color ideas: 
+Teal (Base Color): #6DC8C8
+Light Aqua: #6DE1E1 
+Mint Green: #6DC89B 
+Sky Blue: #6DAFC8 
+Soft Coral: #C86D6D 
+Warm Yellow: #C8C86D 
+Soft Lavender: #C86DC8 
+Light Teal: #A9E5E5
+Dark Teal: #44A3A3
+Deep Teal: #2F7373
+Off White: #F5F5F5 
+Light Gray: #E1E1E1 
+Charcoal: #333333 
+ -->
+  <body class="bg-[#6DAFC8]">
+    <header id="header" class="p-4 bg-[#6DE1E1]">
+      <nav id="navbar" class="flex justify-between items-center w-full h-16"> <!-- Set fixed height for navbar -->
+        
+    
+        <!-- Links Section (Home, Journal, About Us) -->
+        <ul class="flex flex-col lg:flex-row lg:space-x-8 font-medium text-gray-700">
+          <li>
+            <a href="index.html" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="journal.html" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+              Journal
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+              About Us
+            </a>
+          </li>
+        </ul>
 
-  <main id="main-content">
+           <!-- Logo Section -->
+        <div id="logo" class="flex items-center">
+          <img class="h-12 w-auto" src="/movie-diary/images/logo&colors/1/png/logo-no-background.png" alt="logo" /> <!-- Adjust height -->
+        </div>
+    
+        <!-- Search Bar Section -->
+        <div id="search-bar" class="flex">
+          <input type="text" placeholder="Search movies..." class="border border-gray-300 p-2 rounded-md w-full lg:w-64" />
+        </div>
+      </nav>
+    </header>
+    
 
-    <section id="hero">
+    <main id="main-content">
+      <section id="hero"></section>
 
-    </section>
-
-    <section id="movie-cards">
-
-    </section>
-
-  </main>
+      <section id="fav-movies-storage"></section>
+    </main>
 
   <footer id="footer">
     <footer class="text-blue-600 body-font">
