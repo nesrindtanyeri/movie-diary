@@ -25,13 +25,16 @@ Off White: #F5F5F5 (For light backgrounds)
 Light Gray: #E1E1E1 (Subtle gray for backgrounds or dividers)
 Charcoal: #333333 (Dark color for text or accents)
  -->
+
 <body class="bg-[#6DAFC8]">
   <header id="header" class="p-4 bg-[#6DE1E1]">
     <nav id="navbar" class="flex justify-between items-center w-full">
-      
+
       <!-- Links Section (Home and Journal) -->
       <ul class="flex flex-col lg:flex-row lg:space-x-8 font-medium text-gray-700">
         <li>
+          <a href="#"
+            class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
           <a href="index.html" id="home" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
             Home
           </a>
@@ -42,7 +45,7 @@ Charcoal: #333333 (Dark color for text or accents)
           </a>
         </li>
       </ul>
-  
+
       <!-- Search Bar Section -->
       <div id="search-bar" class="flex ml-auto">
         <input type="text" placeholder="Search movies..." class="border border-gray-300 p-2 rounded-md w-full lg:w-64">
@@ -59,8 +62,12 @@ Charcoal: #333333 (Dark color for text or accents)
     <section id="movie-cards">
 
     </section>
-  
 
+    <div id="movies-container" class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+      <!-- Movie Cards will be inserted here -->
+    </div>
+
+    <script src="main.js"></script>
   </main>
 
   <footer id="footer">
