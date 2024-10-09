@@ -29,4 +29,14 @@ function displayMovies(movies) {
 }
 
 
-
+// Add to favorites
+function addToFavorites(movieId) {
+  fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`)
+      .then(response => response.json())
+      .then(movie => {
+          let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+          favorites.push(movie);
+          localStorage.setItem('favorites', JSON.stringify(favorites));
+          alert(`${movie.title} added to favorites!`);
+      });
+}
