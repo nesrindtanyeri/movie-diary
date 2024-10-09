@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="journal.js"></script>
-    <link href="style.css" rel="stylesheet">
 
-    <title>Movie Meta</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js" defer></script>
+  <link href="style.css" rel="stylesheet">
+
+  <title>Movie Meta</title>
 </head>
-
-<body>
-  <header id="header">
-    <nav id="navbar"></nav>>
-    <div id="search-bar"></div>
+<!-- Some color ideas: 
+Teal (Base Color): #6DC8C8
+Light Aqua: #6DE1E1 
+Mint Green: #6DC89B 
+Sky Blue: #6DAFC8 
+Soft Coral: #C86D6D 
+Warm Yellow: #C8C86D 
+Soft Lavender: #C86DC8 
+Light Teal: #A9E5E5
+Dark Teal: #44A3A3
+Deep Teal: #2F7373
+Off White: #F5F5F5 
+Light Gray: #E1E1E1 
+Charcoal: #333333 
+ -->
+<body class="bg-[#6DAFC8]">
+  <header id="header" class="p-4 bg-[#6DE1E1]">
+    <nav id="navbar" class="flex justify-between items-center w-full">
+      
+      <!-- Links Section (Home and Journal) -->
+      <ul class="flex flex-col lg:flex-row lg:space-x-8 font-medium text-gray-700">
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+            Journal
+          </a>
+        </li>
+      </ul>
+  
+      <!-- Search Bar Section -->
+      <div id="search-bar" class="flex ml-auto">
+        <input type="text" placeholder="Search movies..." class="border border-gray-300 p-2 rounded-md w-full lg:w-64">
+      </div>
+    </nav>
   </header>
 
   <main id="main-content">
@@ -21,14 +56,15 @@
 
     </section>
 
-    <setion id="movie-cards">
+    <section id="fav-movies-storage">
 
-    </setion>
+    </section>
+  
 
   </main>
 
   <footer id="footer">
-
   </footer>
 </body>
+
 </html>

@@ -4,20 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="main.js" defer></script>
   <link href="style.css" rel="stylesheet">
 
   <title>Movie Meta</title>
 </head>
-
-<body>
-  <header id="header">
-    <nav id="navbar">
-
-    </nav>>
-    <div id="search-bar">
-
-    </div>
+<!-- 
+Teal (Base Color): #6DC8C8
+Light Aqua: #6DE1E1 (Lighter version of the base teal)
+Mint Green: #6DC89B (Teal with more green tones)
+Sky Blue: #6DAFC8 (Teal with a bit more blue tone)
+Soft Coral: #C86D6D (A soft coral/red to complement the teal)
+Warm Yellow: #C8C86D (Warm yellow or mustard tone for a fresh, vibrant look)
+Soft Lavender: #C86DC8 (Muted lavender or purple to balance with the teal)
+Light Teal: #A9E5E5
+Dark Teal: #44A3A3
+Deep Teal: #2F7373
+Off White: #F5F5F5 (For light backgrounds)
+Light Gray: #E1E1E1 (Subtle gray for backgrounds or dividers)
+Charcoal: #333333 (Dark color for text or accents)
+ -->
+<body class="bg-[#6DAFC8]">
+  <header id="header" class="p-4 bg-[#6DE1E1]">
+    <nav id="navbar" class="flex justify-between items-center w-full">
+      
+      <!-- Links Section (Home and Journal) -->
+      <ul class="flex flex-col lg:flex-row lg:space-x-8 font-medium text-gray-700">
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 pr-4 pl-3 lg:py-0 hover:text-blue-600 focus:text-blue-600 transition-colors duration-300">
+            Journal
+          </a>
+        </li>
+      </ul>
+  
+      <!-- Search Bar Section -->
+      <div id="search-bar" class="flex ml-auto">
+        <input type="text" placeholder="Search movies..." class="border border-gray-300 p-2 rounded-md w-full lg:w-64">
+      </div>
+    </nav>
   </header>
 
   <main id="main-content">
@@ -26,14 +56,15 @@
 
     </section>
 
-    <setion id="movie-cards">
+    <section id="movie-cards">
 
-    </setion>
+    </section>
+  
 
   </main>
 
   <footer id="footer">
-
   </footer>
 </body>
+
 </html>
