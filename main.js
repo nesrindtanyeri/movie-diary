@@ -62,36 +62,41 @@ function addToFavorites(movieId) {
       });
     }
 
-function searchMovies(movies) {
-  const input = document.querySelector("#search-movie").value.toLowerCase();
-  const allMovies = movies.map((movie) => movie.title.toLowerCase());
-
-  const modal = document.getElementById("search-modal"); 
-  const modalResults = document.getElementById("search-results"); 
-  const closeModal = document.querySelector(".close-modal");
-
-  modalResults.innerHTML = ""; 
-
-  let found = false; 
-  for (let i = 0; i < allMovies.length; i++) {
-    if (allMovies[i].includes(input)) {
-      const listItem = document.createElement("li");
-      listItem.textContent = movies[i].title; 
-      modalResults.appendChild(listItem); 
-      found = true;
+    function searchMovies(movies) {
+      const input = document.querySelector("#search-movie").value.toLowerCase();
+      const allMovies = movies.map((movie) => movie.title.toLowerCase());
+    
+      const modal = document.getElementById("search-modal"); 
+      const modalResults = document.getElementById("search-results"); 
+      const closeModal = document.querySelector(".close-modal");
+    
+      modalResults.innerHTML = ""; 
+    
+      let found = false; 
+      for (let i = 0; i < allMovies.length; i++) {
+        if (allMovies[i].includes(input)) {
+          const listItem = document.createElement("li");
+          listItem.textContent = movies[i].title; 
+          modalResults.appendChild(listItem); 
+          found = true;
+        }
+      }
+    
+      if (!found) {
+        const listItem = document.createElement("li");
+        listItem.textContent = "This movie was not found";
+        modalResults.appendChild(listItem);
+      }
+    
+      modal.classList.remove("hidden");
+    
+      closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+    
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
     }
-  }
-
-  if (!found) {
-    const listItem = document.createElement("li");
-    listItem.textContent = "This movie was not found";
-    modalResults.appendChild(listItem);
-  }
-
-  modal.classList.remove("hidden");
-
-  closeModal.addEventListener("click", () => {
-    modal.classList.add("hidden");
-  });
-
-}

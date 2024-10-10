@@ -80,25 +80,23 @@ Charcoal: #333333
           </li>
         </ul>
 
-        <!-- Search Bar Section -->
-        <div id="search-bar" class="w-full lg:w-auto mt-2 lg:mt-0">
-          <input
-            id="search-movie"
-            type="text"
-            placeholder="Search movies..."
-            class="border border-gray-300 p-2 rounded-md w-full lg:w-64"
-          />
-          
-            <!-- Search Results  -->
-            <section id="search-modal"
-              class="absolute hidden bg-white border border-gray-300 rounded-lg shadow-lg w-full lg:w-64 z-50 top-full mt-1 right-0"
-              role="dialog" aria-labelledby="search-results-title">
-      <div class=" p-4">
-              <span class="close-modal cursor-pointer text-gray-500 text-xl float-right">&times;</span>
-              <h2 class="text-lg font-semibold mb-4 text-center">Search Results</h2>
-              <ul id="search-results" class="list-disc pl-5"></ul>
-          </div>
-          </section>
+      <!-- Search Bar Section -->
+      <div id="search-bar" class="relative flex w-full lg:w-auto mt-2 lg:mt-0">
+        <input id="search-movie" type="text" placeholder="Search movies..."
+          class="border border-gray-300 p-2 rounded-md w-full lg:w-64" />
+
+
+        <!-- Search Results  -->
+        <section id="search-modal"
+          class="absolute hidden bg-white border border-gray-300 rounded-lg shadow-lg w-full lg:w-64 z-50 top-full mt-1 right-0"
+          role="dialog" aria-labelledby="search-results-title"">
+  <div class=" p-4">
+          <span class="close-modal cursor-pointer text-gray-500 text-xl float-right">&times;</span>
+          <h2 class="text-lg font-semibold mb-4 text-center">Search Results</h2>
+          <ul id="search-results" class="list-disc pl-5"></ul>
+      </div>
+      </section>
+      </div>
         </div>
       </nav>
     </header>
