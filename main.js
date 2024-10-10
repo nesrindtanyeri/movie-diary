@@ -39,12 +39,6 @@ function displayMovies(movies) {
   });
 }
 
-function searchMovies(movies) {
-  const input = document.querySelector("#search-movie").value.toLowerCase();
-  const allMovies = movies.map((movie) => movie.title.toLowerCase());
-
-<<<<<<< Updated upstream
-// Add to favorites
 function addToFavorites(movieId) {
   fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`)
       .then(response => response.json())
@@ -54,7 +48,12 @@ function addToFavorites(movieId) {
           localStorage.setItem('favorites', JSON.stringify(favorites));
           alert(`${movie.title} added to favorites!`);
       });
-=======
+    }
+
+function searchMovies(movies) {
+  const input = document.querySelector("#search-movie").value.toLowerCase();
+  const allMovies = movies.map((movie) => movie.title.toLowerCase());
+
   const modal = document.getElementById("search-modal"); 
   const modalResults = document.getElementById("search-results"); 
   const closeModal = document.querySelector(".close-modal");
@@ -88,5 +87,4 @@ function addToFavorites(movieId) {
       modal.classList.add("hidden");
     }
   });
->>>>>>> Stashed changes
 }
