@@ -43,18 +43,6 @@ function searchMovies(movies) {
   const input = document.querySelector("#search-movie").value.toLowerCase();
   const allMovies = movies.map((movie) => movie.title.toLowerCase());
 
-<<<<<<< Updated upstream
-// Add to favorites
-function addToFavorites(movieId) {
-  fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`)
-      .then(response => response.json())
-      .then(movie => {
-          let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-          favorites.push(movie);
-          localStorage.setItem('favorites', JSON.stringify(favorites));
-          alert(`${movie.title} added to favorites!`);
-      });
-=======
   const modal = document.getElementById("search-modal"); 
   const modalResults = document.getElementById("search-results"); 
   const closeModal = document.querySelector(".close-modal");
@@ -83,10 +71,4 @@ function addToFavorites(movieId) {
     modal.classList.add("hidden");
   });
 
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.classList.add("hidden");
-    }
-  });
->>>>>>> Stashed changes
 }

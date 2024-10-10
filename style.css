@@ -2,11 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 
-#search-bar {
-    position: relative; /* Ensure the modal positions correctly underneath */
-  }
+
   
-  #search-modal {
-    top: 100%; /* Place the modal directly below the search bar */
-    left: 0;   /* Align it to the left of the search bar */
-  }
