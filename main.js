@@ -1,8 +1,8 @@
 const apiKey = "146c2867b133120789aa9d2e0de77730";
 const moviesContainer = document.getElementById("movies-container");
-let allMoviesData = [];
 const toggleButton = document.getElementById('navbar-toggle');
 const navbarLinks = document.getElementById('navbar-links');
+let allMoviesData = [];
 
 
 document.getElementById('navbar-toggle').addEventListener('click', function () {
@@ -34,6 +34,7 @@ function fetchPopularMovies() {
 
   function displayMovies(movies) {
     moviesContainer.innerHTML = ""; // Clear previous movies
+    
     movies.forEach((movie) => {
       const movieCard = `
         <div class="bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105">

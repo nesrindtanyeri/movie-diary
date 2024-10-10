@@ -26,10 +26,9 @@ Charcoal: #333333
  -->
 
   <body class="bg-[#6DAFC8]">
-    <header id="header" class="border-b border-gray-300 bg-[#6DE1E1]">
+    <header id="header" class="container mx-auto border-gray-300 bg-[#6DE1E1]">
       <nav
-        id="navbar"
-        class="container mx-auto flex flex-wrap items-center justify-between p-4"
+        id="navbar" class="container mx-auto flex flex-wrap items-center justify-between p-4"
       >
         <!-- Logo Section -->
         <div
@@ -44,7 +43,6 @@ Charcoal: #333333
         </div>
 
         <!-- Toggle Button for Mobile Navbar -->
-         <!-- Mobile Toggle Button -->
     <button id="navbar-toggle" class="lg:hidden flex items-center justify-center focus:outline-none">
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -90,6 +88,17 @@ Charcoal: #333333
             placeholder="Search movies..."
             class="border border-gray-300 p-2 rounded-md w-full lg:w-64"
           />
+          
+            <!-- Search Results  -->
+            <section id="search-modal"
+              class="absolute hidden bg-white border border-gray-300 rounded-lg shadow-lg w-full lg:w-64 z-50 top-full mt-1 right-0"
+              role="dialog" aria-labelledby="search-results-title">
+      <div class=" p-4">
+              <span class="close-modal cursor-pointer text-gray-500 text-xl float-right">&times;</span>
+              <h2 class="text-lg font-semibold mb-4 text-center">Search Results</h2>
+              <ul id="search-results" class="list-disc pl-5"></ul>
+          </div>
+          </section>
         </div>
       </nav>
     </header>
