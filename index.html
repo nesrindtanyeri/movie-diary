@@ -10,6 +10,9 @@
     <title>Meta Movie</title>
   </head>
   <!-- Some color ideas: 
+    <title>Meta Movie</title>
+  </head>
+  <!-- Some color ideas: 
 Teal (Base Color): #6DC8C8
 Light Aqua: #6DE1E1 
 Mint Green: #6DC89B 
@@ -25,6 +28,60 @@ Light Gray: #E1E1E1
 Charcoal: #333333 
  -->
 
+  <body class="bg-[#6DAFC8]">
+    <header id="header" class="container mx-auto border-gray-300 bg-[#6DE1E1]">
+      <nav
+        id="navbar" class="container mx-auto flex flex-wrap items-center justify-between p-4"
+      >
+        <!-- Logo Section -->
+        <div
+          id="logo"
+          class="w-full lg:w-auto flex justify-center lg:justify-start mb-4 lg:mb-0"
+        >
+          <img
+            class="h-12 w-auto"
+            src="/movie-diary/images/logo&colors/1/png/logo-no-background.png"
+            alt="logo"
+          />
+        </div>
+
+        <!-- Toggle Button for Mobile Navbar -->
+    <button id="navbar-toggle" class="lg:hidden flex items-center justify-center focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+
+        <!-- Links Section (Home, Journal, About Us) -->
+        <ul
+          id="navbar-links"
+          class="hidden lg:flex lg:space-x-8 w-full lg:w-auto flex-col lg:flex-row items-center text-center"
+        >
+          <li class="w-full lg:w-auto">
+            <a
+              href="index.html"
+              class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300"
+            >
+              Home
+            </a>
+          </li>
+          <li class="w-full lg:w-auto">
+            <a
+              href="journal.html"
+              class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300"
+            >
+              Journal
+            </a>
+          </li>
+          <li class="w-full lg:w-auto">
+            <a
+              href="#"
+              class="block py-2 pr-4 pl-3 rounded-full hover:text-blue-600 focus:text-blue-600 transition-colors duration-300"
+            >
+              About Us
+            </a>
+          </li>
+        </ul>
   <body class="bg-[#6DAFC8]">
     <header id="header" class="container mx-auto border-gray-300 bg-[#6DE1E1]">
       <nav
@@ -105,30 +162,8 @@ Charcoal: #333333
 
     <main id="main-content">
       <section id="hero"></section>
-        <!-- Logo Section -->
-        <div id="logo" class="flex items-center">
-          <img
-            class="h-12 w-auto"
-            src="/movie-diary/images/logo&colors/1/png/logo-no-background.png"
-            alt="logo"
-          />
-        </div>
-    
-        <!-- Search Bar Section -->
-        <div id="search-bar" class="flex w-full lg:w-auto mt-2 lg:mt-0">
-          <input
-            type="text"
-            placeholder="Search movies..."
-            class="border border-gray-300 p-2 rounded-md w-full lg:w-64"
-          />
-        </div>
-      </nav>
-    </header>
-    
-    <main id="main-content">
-      <section id="hero"></section>
 <!-- Hero Section -->
-<section class="relative bg-cover bg-center h-screen mt-16" style="background-image: url('/images/Hero-image/Clapperboard.jpg');">
+<section class="relative bg-cover bg-center h-screen mt-16" style="background-image: url('images/Hero-image/Clapperboard.jpg');">
   <div class="absolute inset-0 bg-black bg-opacity-50"></div> 
   <div class="container mx-auto flex flex-col items-center justify-center h-full relative z-10 text-center">
     <!-- Hero Content -->
