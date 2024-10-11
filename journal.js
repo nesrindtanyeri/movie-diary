@@ -1,5 +1,10 @@
 const favoritesContainer = document.getElementById('favorites-container');
 
+document.getElementById('navbar-toggle').addEventListener('click', function () {
+    const navbarLinks = document.getElementById('navbar-links');
+    navbarLinks.classList.toggle('hidden');
+  });
+
 // Fetch favorites from localStorage on load
 document.addEventListener('DOMContentLoaded', displayFavorites);
 
