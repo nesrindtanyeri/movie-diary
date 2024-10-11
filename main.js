@@ -56,11 +56,20 @@ function addToFavorites(movieId) {
       .then(response => response.json())
       .then(movie => {
           let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-          favorites.push(movie);
-          localStorage.setItem('favorites', JSON.stringify(favorites));
-          alert(`${movie.title} added to favorites!`);
-      });
-    }
+
+          // Check if the movie is already in the favorites
+          const movieExists = favorites.some(favMovie => favMovie.id === movie.id);
+
+          if (!movieExists) {
+              favorites.push(movie); // Add the movie if it doesn't already exist
+              localStorage.setItem('favorites', JSON.stringify(favorites));
+              alert(`${movie.title} added to favorites!`);
+          } else {
+              alert(`${movie.title} is already in your favorites!`);
+          }
+      })
+      .catch(error => console.error('Error fetching movie:', error));
+}
 
     function searchMovies(movies) {
       const input = document.querySelector("#search-movie").value.toLowerCase();
